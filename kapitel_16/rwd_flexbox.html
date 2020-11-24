@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Flexbox</title>
+  <style>
+    @-ms-viewport {
+      width: device-width;
+    }
+    @viewport {
+      width: device-width;
+    }
+    html {
+      font: 100% sans-serif;
+      background: #34403e;
+    }
+    .kopf, .inhalt, .seite, .navi, .fuss {
+      background: #3483ba;
+      color: white;
+      border-radius: 0.8rem;
+      margin: 0.8rem;
+      padding: 1rem;
+    }
+
+    h1, h2 {
+      font-size: 2rem;
+    }
+
+    .haupt {
+      display: flex;
+    }
+
+    .inhalt {
+      flex: 1;
+      min-height: 15rem;
+    }
+
+    .navi {
+      width: 15rem;
+      order: -1;
+    }
+
+    .seite {
+      width: 15rem;
+    }
+
+    @media all and (max-width: 55em) {
+      .haupt {
+        flex-direction: column;
+      }
+      .inhalt, .navi, .seite {
+        order: 0;
+        width: auto;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="kopf">
+    <h2>kopf</h2></header>
+  <main class="haupt">
+    <article class="inhalt">
+      <h2>inhalt</h2></article>
+    <nav class="navi">
+      <h2>navi</h2></nav>
+    <aside class="seite">
+      <h2>seite</h2></aside>
+  </main>
+  <footer class="fuss">
+    <h2>fuss</h2></footer>
+
+</body>
+</html>

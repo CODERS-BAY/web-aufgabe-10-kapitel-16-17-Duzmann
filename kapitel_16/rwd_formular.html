@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Formular</title>
+	<style>
+	  @-ms-viewport {
+		  width: device-width;
+	  }
+	  @viewport {
+		  width: device-width;
+	  }
+		* {
+			box-sizing: border-box;
+		}
+
+		html {
+			font: 120% sans-serif;
+		}
+		.formular {
+			width: 90%;
+			padding: 2rem;
+			margin: auto;
+			box-shadow: 0 0 .2rem #ababab;
+			border-radius: 0.25rem;
+		}
+		.formular ul {
+			padding-left: 0;
+		}
+		.formular li {
+			margin-bottom: 1rem;
+			list-style-type: none;
+		}
+		.formular li label {
+			padding: 0.5rem 2rem 0.5rem 0rem;
+			display: block;
+		}
+		.formular li input,
+		.formular li textarea {
+			padding: 1rem;
+			border: 1px solid #ddd;
+			width: 100%;
+			border-radius: 0.25rem;
+			font: inherit;
+			transition: all 0.4s;
+		}
+		.formular input:focus,
+		.formular textarea:focus {
+			border-color: #80b4ff;
+			outline: 0;
+			box-shadow: 0 0 0 .2rem #b5c9ed;
+		}
+
+		.formular li button {
+			padding: 0.5rem 1rem;
+			border: none;
+			background: #333;
+			color: #f2f2f2;
+			font: inherit;
+			border-radius: 0.25rem;
+		}
+
+		@media screen and (min-width: 50em) {
+			.formular {
+				max-width: 50rem;
+			}
+			.formular li {
+				display: flex;
+			}
+			.formular li label {
+				flex: 1 0 25%;
+			}
+			.formular li input,
+			.formular li textarea {
+				flex: 1 0 75%;
+			}
+			.formular li button {
+				margin-left: auto;
+			}
+		}
+	</style>
+</head>
+
+<body>
+
+	<form class="formular">
+		<ul>
+			<li>
+				<label for="vorname">Vorname</label>
+				<input type="text" name="vorname" id="vorname">
+			</li>
+			<li>
+				<label for="nachname">Nachname</label>
+				<input type="text" name="nachname" id="nachname">
+			</li>
+			<li>
+				<label for="email">E-Mail</label>
+				<input type="email" name="email" id="email">
+			</li>
+			<li>
+				<label for="nachricht">Nachricht</label>
+				<textarea rows="6" cols="30" name="nachricht" id="nachricht"></textarea>
+			</li>
+			<li>
+				<button type="submit">Absenden</button>
+			</li>
+		</ul>
+	</form>
+
+</body>
+
+</html>

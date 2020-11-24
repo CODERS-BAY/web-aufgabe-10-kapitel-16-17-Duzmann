@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Beispiellayout</title>
+  <style>
+    @-ms-viewport {
+      width: device-width;
+    }
+
+    @viewport {
+      width: device-width;
+    }
+
+    *,
+    *::after,
+    *::before {
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #260F25;
+      color: #fff;
+      line-height: 1.3;
+      font: 100% sans-serif;
+      ;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: auto;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .kopf {
+      background-color: #5F0032;
+      color: #fff;
+      text-align: center;
+      padding: 20px 0px;
+      width: 100%;
+    }
+
+    .kopf h1,
+    .navigation h2 {
+      font-weight: normal;
+    }
+
+    .navigation {
+      width: 100%;
+      background-color: #C9283E;
+      color: #260F25;
+    }
+
+    .navigation ul {
+      display: flex;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .navigation li {
+      flex: 1;
+      text-align: center;
+    }
+
+    .navigation a {
+      display: block;
+      padding: 1rem;
+    }
+
+    .navigation a:hover,
+    .navigation a:focus,
+    .navigation a:active {
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    .seite {
+      width: 37.5%;
+      background-color: #f3dddc;
+      color: #260F25;
+      padding: 0 2.083%;
+    }
+
+    .inhalt {
+      width: 62.5%;
+      background-color: #fff;
+      color: #260f25;
+      padding: 0 2.083%;
+    }
+
+    a:link,
+    a:visited {
+      color: #260F25;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    /* Button bei großen Viewports ausblenden */
+    [aria-controls="navi-liste"] {
+      display: none;
+    }
+
+    @media screen and (max-width: 520px) {
+      .container {
+        flex-direction: column;
+      }
+      .seite,
+      .inhalt {
+        width: 100%;
+      }
+      .kopf {
+        padding: 0;
+      }
+      .navigation {
+        position: relative;
+      }
+      .navigation ul {
+        flex-direction: column;
+        margin-left: 0;
+        padding-left: 0;
+      }
+      .navigation li {
+        padding: 0;
+        border-bottom: 1px solid white;
+      }
+      .navigation button {
+        position: absolute;
+        top: -1.5rem;
+        border: 0;
+        background: transparent;
+        color: white;
+        font-size: inherit;
+      }
+      [aria-controls="navi-liste"] {
+        display: block;
+      }
+      .navigation ul {
+        display: none;
+      }
+      [aria-expanded="true"]~ul {
+        display: block;
+      }
+      [aria-expanded="false"] .geschlossen {
+        display: none;
+      }
+      [aria-expanded="true"] .geschlossen {
+        display: inline-block;
+      }
+      [aria-expanded="true"] .offen {
+        display: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <header class="kopf">
+      <h1>Kopfbereich</h1>
+    </header>
+    <nav class="navigation">
+      <button aria-expanded="false" aria-controls="navi-liste">
+          <span class="offen">☰</span>
+          <span class="geschlossen">×</span> Menü
+        </button>
+      <ul id="navi-liste">
+        <li>
+          <a href="#">Über uns</a>
+        </li>
+        <li>
+          <a href="#">Service</a>
+        </li>
+        <li>
+          <a href="#">Kontakt</a></li>
+        <li>
+          <a href="#">Impressum</a>
+        </li>
+      </ul>
+    </nav>
+
+    <main class="inhalt">
+      <p>Nam justo ligula, interdum sodales volutpat vel, accumsan ac erat. Quisque aliquam venenatis consectetur. Cras euismod metus nec tortor porttitor vestibulum. Phasellus vehicula ipsum euismod felis faucibus vitae pellentesque quam tristique. Curabitur
+        eleifend vestibulum est ac interdum. Curabitur varius fringilla velit, a rhoncus lacus tincidunt ac. Nam dictum augue sed ligula facilisis bibendum commodo nec urna. In hac habitasse platea dictumst. Integer non eros nibh, sed interdum libero.
+        Sed id elit at augue mollis consectetur.
+      </p>
+
+      <p>Nam justo ligula, interdum sodales volutpat vel, accumsan ac erat. Quisque aliquam venenatis consectetur. Cras euismod metus nec tortor porttitor vestibulum. Phasellus vehicula ipsum euismod felis faucibus vitae pellentesque quam tristique. Curabitur
+        eleifend vestibulum est ac interdum. Curabitur varius fringilla velit, a rhoncus lacus tincidunt ac. Nam dictum augue sed ligula facilisis bibendum commodo nec urna. In hac habitasse platea dictumst. Integer non eros nibh, sed interdum libero.
+        Sed id elit at augue mollis consectetur.
+      </p>
+
+      <p>Nam justo ligula, interdum sodales volutpat vel, accumsan ac erat. Quisque aliquam venenatis consectetur. Cras euismod metus nec tortor porttitor vestibulum. Phasellus vehicula ipsum euismod felis faucibus vitae pellentesque quam tristique. Curabitur
+        eleifend vestibulum est ac interdum. Curabitur varius fringilla velit, a rhoncus lacus tincidunt ac. Nam dictum augue sed ligula facilisis bibendum commodo nec urna. In hac habitasse platea dictumst. Integer non eros nibh, sed interdum libero.
+        Sed id elit at augue mollis consectetur.
+      </p>
+
+      <p>Nam justo ligula, interdum sodales volutpat vel, accumsan ac erat. Quisque aliquam venenatis consectetur. Cras euismod metus nec tortor porttitor vestibulum. Phasellus vehicula ipsum euismod felis faucibus vitae pellentesque quam tristique. Curabitur
+        eleifend vestibulum est ac interdum. Curabitur varius fringilla velit, a rhoncus lacus tincidunt ac. Nam dictum augue sed ligula facilisis bibendum commodo nec urna. In hac habitasse platea dictumst. Integer non eros nibh, sed interdum libero.
+        Sed id elit at augue mollis consectetur.
+      </p>
+    </main>
+    <aside class="seite">
+      <p>
+        <img src="http://via.placeholder.com/300x150/F0433A/ffffff" alt="Platzhalterbild"> Nam justo ligula, interdum sodales volutpat vel, accumsan ac erat. Quisque aliquam venenatis consectetur. Cras euismod metus nec tortor porttitor vestibulum. Phasellus
+        vehicula ipsum euismod felis faucibus vitae pellentesque quam tristique. Curabitur eleifend vestibulum est ac interdum. Curabitur varius fringilla velit, a rhoncus lacus tincidunt ac. Nam dictum augue sed ligula facilisis bibendum commodo nec
+        urna. In hac habitasse platea dictumst. Integer non eros nibh, sed interdum libero. Sed id elit at augue mollis consectetur.
+      </p>
+    </aside>
+  </div>
+  <script>
+    const hamburger = document.querySelector('button[aria-expanded]');
+
+    function klappNav({
+      target
+    }) {
+      const expanded = target.getAttribute('aria-expanded') === 'true' || false;
+      hamburger.setAttribute('aria-expanded', !expanded);
+    }
+    hamburger.addEventListener('click', klappNav);
+  </script>
+
+</body>
+
+</html>

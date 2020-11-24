@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Adaptiv vs Responsiv</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font: 120%/1.4 sans-serif;
+      color: #485048;
+      background-color: #fff;
+    }
+
+    section {
+      margin: auto;
+      max-width: 900px;
+      display: flex;
+      border: 4px solid #d7443f;
+      border-radius: 5px;
+      padding: 1rem;
+      margin-top: 1rem;
+    }
+
+    article {
+      padding-right: 1rem;
+    }
+
+    .adaptive {
+      width: 900px;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+
+    @media screen and (max-width: 920px) {
+      .adaptive {
+        width: 600px;
+        flex-direction: column;
+      }
+
+    }
+
+    @media screen and (max-width: 620px) {
+      .adaptive {
+        width: 320px;
+      }
+    }
+
+    @media screen and (max-width: 600px) {
+      .responsive {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Adaptiv vs responsiv</h1>
+    <p>Das unterschiedliche Verhalten sieht man, wenn man das Browserfenster langsam verkleinert. Wenn der Viewport unter 920px ist, springt das <strong>adaptive Layout</strong> auf die andere Darstellung um. Ein weiterer Sprung geschieht, wenn der Viewport
+      kleiner als 600px ist. (Die Werte 920px un 600px haben keine tiefere Bedeutung, ich habe mir sie einfach ausgedacht.)
+      <p>Das <strong>responsive Layout</strong> verkleinert sich hingegen kontinuierlich, wenn das Browserfenster schmaler wird - man sieht auch schön, wie das Bild schmaler wird. Es gibt dabei unendlich viele Zwischenstufen</p>
+  </header>
+  <section class="adaptive">
+    <article>
+      <h2>adaptive</h2>
+      <img src="https://placehold.it/350x80/333a42/ffffff?text=Ein+Bild" alt="Bildplatzhalter" class="bildlinks">
+      <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusamet. </p>
+    </article>
+    <aside>
+      <p>Lorem ipsum dolor sitm erat, sed diam voluptua. At vero eos et accusam emet.</p>
+      <p>eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed di sanctus est Lorem ipsum dolor sit am</p>
+    </aside>
+  </section>
+  <section class="responsive">
+    <article>
+      <h2>responsive</h2>
+      <img src="https://placehold.it/350x80/333a42/ffffff?text=Ein+Bild" alt="Bildplatzhalter" class="bildlinks">
+      <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusamet. </p>
+    </article>
+    <aside>
+      <p>Lorem ipsum dolor sitm erat, sed diam voluptua. At vero eos et accusam emet.</p>
+      <p>eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed di sanctus est Lorem ipsum dolor sit am</p>
+    </aside>
+  </section>
+</body>
+</html>
