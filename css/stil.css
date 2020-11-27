@@ -1,0 +1,353 @@
+
+@font-face {
+  font-family: creatorCredits;
+  src: url(../fonts/creatorcredits-bb.regular.otf);
+}
+
+@font-face {
+  font-family: powerLord;
+  src: url(../fonts/PowerLordExtraExpandedItalic-dzVE.otf);
+}
+
+@media screen and (max-width: 920px) {
+  .adaptive {
+    width: 600px;
+    flex-direction: column;
+  }
+
+}
+
+@media screen and (max-width: 620px) {
+  .adaptive {
+    width: 320px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .responsive {
+    flex-direction: column;
+  }
+}
+
+/*
+* {
+  box-sizing: border-box;
+}
+*/
+
+.adaptive {
+  width: 900px;
+}
+
+body{
+background-color: rgb(255, 255, 255);
+}
+
+.styledHead {
+background-color: orange;
+ }
+
+ .cornerImage {
+   float: left;
+   margin-right: .5rem;
+   shape-outside: url(img/funtronics-spielautomaten-corner.png);
+ shape-margin: .5rem;
+ max-width: 25rem;
+ width: 100%;
+ z-index: 1;
+  }
+ 
+
+.adressRibbon {
+  display: block;
+  font-family: creatorCredits;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  font-weight: lighter;
+  text-align: right;
+  color: #FFFFFF;
+  letter-spacing: .05rem;
+  background-color: rgb(236, 65, 65);
+  margin-top: auto;
+  padding: .15rem;
+  padding-right: .5rem;
+  line-height: 1.2rem;
+}
+
+
+  
+h1 {
+font-family: powerLord;
+font-weight:normal;
+color:white;
+font-size: 2rem;  
+margin-top: 0;
+padding: 1.5rem;
+padding-bottom: 0;
+padding-right:6rem; 
+text-shadow: .1rem .1rem black;
+-webkit-text-stroke-width: 2px;
+-webkit-text-stroke-color: black;
+float: right;
+}
+
+
+  
+.lookLikeH1 {
+  font-family: powerLord;
+  font-weight:normal;
+  color:white;
+  font-size: 1.5rem;  
+  padding-bottom: 1.6rem;
+  padding-right:1rem; 
+  letter-spacing: .05rem;
+  text-transform: lowercase;
+  }
+  
+
+
+
+h2 {
+}
+
+
+h3 {
+  font-size: 1rem;  
+font-weight: bold;
+  
+}
+
+p {
+  font-family: creatorCredits;
+}
+
+a {
+  color: inherit;
+}
+
+/* Style the navigation menu */
+.topnav {
+  
+  overflow: hidden;
+  background-color: none;
+  position: relative;
+  z-index: 1;
+  color: black;
+  text-align: right;
+  z-index: 2;
+  
+}
+
+/* Hide the links inside the navigation menu (except for logo/home) */
+.topnav #myLinks {
+  padding-top: 5rem;
+  display: none;  
+  text-align: right;
+  line-height: 0.1rem;
+  z-index: 1;
+}
+
+/* Style navigation menu links */
+.topnav a {
+  color: rgb(67, 155, 255);
+  padding: 1rem 1.1rem;
+  text-decoration: none;
+  display: block;
+}
+
+/* Style the hamburger menu */
+.topnav a.icon {
+  
+  font-size: 1.6rem;;
+  background: none;
+  display: block;
+  position: absolute;
+  right: 1.2rem;
+  top: 1rem;
+  color: rgb(0, 0, 0);
+  background-image: url(../img/burgerIconBG.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  
+}
+
+/* Add a grey background color on mouse-over */
+.topnav a:hover {
+  background-color: none;
+  color: rgb(255, 255, 255);
+}
+
+/* Style the active link (or home/logo) */
+.active {
+  background-color: none;
+  color: rgb(255, 255, 255);  
+}
+
+.lookLikeH2 {
+  font-family: powerLord;
+  font-size: 2.5rem;
+  color: orange;
+  margin-bottom: auto;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: black;
+  text-shadow: .1rem .1rem black;  
+}
+
+
+.lookLikeSubHeading {
+  font-size: .75rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-top: auto;  
+  text-align: center;
+  
+}
+
+
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  flex-flow: row wrap;
+  margin-top: 0;    
+  justify-content: center;
+}
+
+.flex-item {
+  
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: auto;
+  text-align: center;
+  margin: .5rem;
+  margin-top: 0;    
+  max-width: 25rem; 
+  min-width: 10rem;  
+}
+
+
+.flex-container-small {
+  display: flex;
+  margin: .5rem;
+  align-content: center;
+}
+
+.flex-item-small {
+  flex-grow: 0;
+  flex-shrink: 0;
+  text-align: center;
+  padding: .25rem;
+}
+
+.icons {
+  
+  object-fit:contain;  
+  height: 3rem;
+  max-width: 6rem;
+  filter: grayscale(100%);
+  margin-left: 1rem;
+  opacity: .85;
+}
+
+.firstParagraphContainer{
+   display: flex;
+ padding-right: .5rem;
+ padding-left: .5rem;
+ text-align: left;
+color: white;
+background-color: rgb(37, 37, 37);
+text-align: justify ;
+font-weight: lighter;
+
+letter-spacing: .05rem;
+}
+
+.firstParagraphItemSmall{
+  flex: 1;  
+  min-width: 12rem;  
+}
+
+.recylingLogo {
+  width: 3rem;
+  float:left;
+  padding-right: .5rem;
+}
+
+.firstParagraphItemWide{
+  flex: 2;
+  flex-shrink: 1;
+  flex-grow: 1;
+  margin-top: -.5rem;
+  margin-bottom: -.5rem;
+}
+
+.whiteOutline {  
+  border: .15rem solid white;
+  border-radius: .2rem;
+  padding-left: .2rem;
+  padding-bottom: .3rem;
+  padding-right: .2rem;
+  text-align: center;
+}
+
+.BlackBackgroundPaprgraph {
+  font-size: 1rem;
+  text-align: left;
+  margin-bottom: 0;
+color: white;
+padding: .25rem;
+background-color: rgb(37, 37, 37);
+text-align: justify ;
+}
+
+
+
+.fullscreenImage {
+  background-image: url(../img/sky-force-reloaded-wallpaper.jpg);
+  background-size: cover;
+  height: 25rem;
+  background-position: center center;
+ border-bottom: 1.5rem solid rgb(46, 46, 46);
+}
+
+.gameLogo {
+  background-image: url(../img/sky-force-reloaded-logo.png);
+  background-size: contain;
+  margin-top: -20rem;
+  margin-left: 5%;
+  width: 18rem;
+  background-repeat: no-repeat;
+  padding-bottom: 20rem;
+  -webkit-filter: drop-shadow(0rem 0rem .4rem rgba(0,0,0,0.4));
+  filter: drop-shadow(0rem 0rem .4rem rgba(0,0,0,0.4));
+ 
+}
+
+.machineHero {
+  height: 25rem;
+  margin-top: -22rem;
+float: right;
+padding-right: 5%;
+}
+
+.twoColumns {
+  column-count: 2;
+  text-align: justify;
+}
+
+.threeColumns {
+  column-count: 3;
+  text-align: justify;
+}
+
+.fourColumns {
+  column-count: 4;
+  text-align: justify;
+}
+
+
+.donations {
+  float:right;
+  width: 7rem;
+  margin-top: -1rem;
+}
