@@ -1,0 +1,20 @@
+button {
+    background-color: blueviolet;
+    /* width: 15%;
+    height: 50px; */
+    padding: 10px;
+    border: none;
+    color: white;
+    font-size: 25px;
+}
+
+
+div {
+    margin-top: 2%;
+    padding: 5%;
+    width: 35%;
+    height: 100px;
+    display: inline-block;
+}
+
+

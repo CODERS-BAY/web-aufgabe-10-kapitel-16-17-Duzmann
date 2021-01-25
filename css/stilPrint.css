@@ -1,0 +1,24 @@
+
+@font-face {
+  font-family: creatorCredits;
+  src: url(../fonts/creatorcredits-bb.regular.otf);
+}
+
+@font-face {
+  font-family: powerLord;
+  src: url(../fonts/PowerLordExtraExpandedItalic-dzVE.otf);
+}
+
+
+
+  .responsive {
+    flex-direction: column;
+  }
+
+
+  .adaptive {
+    width: 320px;
+  }
+
+
+

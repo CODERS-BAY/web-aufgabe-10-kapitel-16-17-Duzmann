@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="de">
+<meta charset="UTF-8">
+<meta name="Funtronics Spielautomaten Recycling" content="Free Web tutorials">
+<meta name="keywords" content="Spielautomaten, Recycling, Funtronics">
+<meta name="author" content="Funtronics">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<head></head>
+
+<body>
+
+
+
+
+    <script>
+        "use strict";
+
+
+
+        function doSomethingWith(infoArray) {
+            document.write("this is your word collection: <br>-------------------------------<br><br>" + infoArray)
+        }
+        let infoArray = [];
+        let addedWord;
+        do {
+            addedWord = prompt("Dieses Wort zur Sammlung hinzufügen\nABBRECHEN: gib den Stop-Code L23K ein");
+            infoArray[infoArray.length] = addedWord;
+        }
+        while (addedWord != "L23K")
+
+
+
+    </script>
+
+<span style="text-transform: uppercase; font-weight: bold;">
+<script>
+doSomethingWith(infoArray)
+</script>
+</span>
+
+</body>
+
+</html>

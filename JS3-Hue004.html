@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="de">
+<meta charset="UTF-8">
+<head></head>
+
+<body>
+
+<h1>Some Heading</h1>
+<p>This is some text</p>
+
+<img id="img1" width=256px height=256px src="">
+<img id="img2" width=256px height=256px src="">
+
+
+
+
+    <button onclick="return fillWithImage()">Bilder Einfügen</button>
+
+    
+
+
+
+    <script>
+        /* Erstelle eine Seite mit zwei img-Tags. Diese sollen jedoch kein src-Attribut enthalten, sodass sie nicht angezeigt werden.
+Gestalte einen Button, der es erlaubt, die Bilder auf der Seite anzuzeigen. */
+
+        "use strict";
+
+
+function fillWithImage(){
+    document.images[0].src="Bild1.png";
+    document.images[1].src="Bild2.png";
+}
+
+    </script>
+
+</body>
+
+</html>

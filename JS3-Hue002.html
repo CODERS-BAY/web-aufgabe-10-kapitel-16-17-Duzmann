@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="de">
+<meta charset="UTF-8">
+<head></head>
+
+<body>
+
+<h1>Some Heading</h1>
+<p>This is some text</p>
+
+
+
+<form name="Eingabeformular" id="Formular1" method="GET" onsubmit="return checkEmail()">
+    <input id="Eingabefeld1" name="Email-Adresse">
+    <button type="submit">Absenden</button>
+    </form>
+    
+
+
+
+    <script>
+        /* 1. Erstelle ein Formular mit einem Eingabefeld für eine E-Mail-Adresse. Wenn der Anwender den Fokus auf das Feld setzt, soll
+eine Nachricht erscheinen, die ihm mitteilt, dass er hier seine E-Mail-Adresse einfügen muss.
+2. Ändere das Programm so ab, dass es jetzt beim Verlassen des Feldes überprüft, ob eine gültige E-Mail-Adresse (mit einem
+@-Zeichen) eingegeben wurde. Gib in diesem Fall eine entsprechende Nachricht aus. */
+
+        "use strict";
+
+
+function checkEmail(){
+    if (!Eingabefeld1.value.includes('@')){
+        alert ("This is not a valid Email Adress");
+    }
+    else {
+        alert ("Thank you")
+        return true;
+    }
+}
+Eingabefeld1.onfocus = CheckEmail;
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="de">
+<meta charset="UTF-8">
+<head></head>
+
+<body>
+
+<h1>Some Heading</h1>
+<p>This is some text</p>
+
+<form name="Eingabeformular">
+    <input id="Eingabefeld1" value="Email-Adresse">
+    </form>
+    
+
+
+
+    <script>
+        /* Erstelle ein Formular mit einem Eingabefeld für eine E-Mail-Adresse. Wenn der Anwender den Fokus auf das Feld setzt, soll
+        eine Nachricht erscheinen, die ihm mitteilt, dass er hier seine E-Mail-Adresse einfügen muss. */
+
+        "use strict";
+
+function FillEmailReminder(){
+    alert('Bitte gib hier deine Email-Adresse an.');
+}
+Eingabefeld1.onfocus = FillEmailReminder;
+
+    </script>
+
+</body>
+
+</html>

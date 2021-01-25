@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="de">
+<meta charset="UTF-8">
+<meta name="Funtronics Spielautomaten Recycling" content="Free Web tutorials">
+<meta name="keywords" content="Spielautomaten, Recycling, Funtronics">
+<meta name="author" content="Funtronics">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<head></head>
+<body>
+
+    
+
+
+    <script>
+    "use strict";
+
+
+
+
+
+let Dictionary = new Map();
+
+Dictionary.set('Auto', 'Car');
+Dictionary.set('Fahrrad', 'Bycycle');
+Dictionary.set('Holz', 'Wood');
+Dictionary.set('Haus', 'House');
+Dictionary.set('Mensch', 'Human');
+
+let abfrage = prompt("Willkommen beim DE-EN Übersetzer")
+let translation = Dictionary.get(abfrage);
+document.write(translation);
+
+
+    </script>     
+    
+</body>
+
+</html>
