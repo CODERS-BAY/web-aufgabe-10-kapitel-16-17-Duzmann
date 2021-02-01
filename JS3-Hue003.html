@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="de">
+<meta charset="UTF-8">
+<head></head>
+
+<body>
+
+<h1>Some Heading</h1>
+<p>This is some text</p>
+
+
+
+<form name="Eingabeformular" id="Formular1" method="GET" onsubmit="return checkURL()">
+    <input id="Eingabefeld1" name="Email-Adresse">
+    <button type="submit">Seite Öffnen</button>
+    </form>
+    
+
+
+
+    <script>
+        /* Erstelle eine Seite mit einem Eingabefeld, in das der Anwender eine Internetadresse eingeben kann. Füge außerdem einen
+Button ein. Wenn der Besucher drauf klickt, soll das Programm die entsprechende Seite aufrufen. Damit das funktioniert,
+muss die komplette URL (einschließlich https://) eingegeben werden. Überprüfe mit dem includes-Befehl, ob dieser Teil in
+der eingegebenen Zeichenkette enthalten ist. Trifft dies nicht zu, füge ihn hinzu */
+
+        "use strict";
+
+
+function checkURL(){
+    if (!Eingabefeld1.value.includes('https://')){
+        Eingabefeld1.value = "https://" + Eingabefeld1.value;
+       // alert (Eingabefeld1.value);
+    }
+    
+    window.open(Eingabefeld1.value);
+}
+
+    </script>
+
+</body>
+
+</html>

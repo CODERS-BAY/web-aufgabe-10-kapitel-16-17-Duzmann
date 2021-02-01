@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="de">
+<meta charset="UTF-8">
+
+<head>
+
+    <link href="css/stilUebung5.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+
+
+
+
+
+    <h1 id="Heading01"></h1>
+    <h2 id="SubHeading01"></h2>
+    <p id="Paragraph01"></p>
+
+    <button id="Btn1" onclick="loader()">Load Contents</button>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script>
+        "use strict";
+
+        /* Gestalte eine Seite mit einer Überschrift, einer Unterüberschrift und mit einem Absatz. Dabei sollen jedoch nur die
+        entsprechenden HTML-Tags vorhanden sein. Die Inhalte werden nach der Betätigung eines Buttons per AJAX abgerufen –
+        aus drei unterschiedlichen Dateien. Verwende für den Abruf der Inhalte in allen drei Fällen die gleiche Funktion. */
+        let i = 0;
+
+        function loader() {
+
+            let targetID, textfile;
+
+
+            switch (i) {
+                case 0: {
+                    console.log('switch 1');
+                    targetID = "Heading01";
+                    textfile = "Heading01.txt";
+                    break;
+                }
+                case 1: {
+                    console.log('switch 2');
+                    targetID = "SubHeading01";
+                    textfile = "SubHeading01.txt";
+                    break;
+                }
+                case 2: {
+                    console.log('switch 3');
+                    targetID = "Paragraph01";
+                    textfile = "Paragraph01.txt";
+                    break;
+                }
+                default:
+                    break;
+            }
+
+
+            function loadContentsViaAjax(url, element) {
+
+
+                let ajaxBufferOject01 = new XMLHttpRequest();
+                ajaxBufferOject01.onreadystatechange = function () {
+                    if (this.readyState == 4 && this.status == 200) {
+                        console.log(this.responseText);
+                        document.getElementById(targetID).innerHTML = this.responseText;
+                    }
+                };
+
+                ajaxBufferOject01.open("GET", url, true);
+                ajaxBufferOject01.send();
+                console.log('ausgabe');
+
+            }
+
+            loadContentsViaAjax(textfile, targetID);
+            i++;
+
+        }
+    </script>
+
+</body>
+
+</html>

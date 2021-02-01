@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="de">
+<meta charset="UTF-8">
+<head>
+
+    <link href="css/stilUebung5.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+<button onclick="return Layout1()">Layout1</button>
+<button onclick="return Layout2()">Layout2</button>
+<button onclick="return Layout3()">Layout3</button>
+
+<h1 id="Main_Heading">Some Heading</h1>
+<p id="Main Paragraph">This is some text</p>
+
+<img id="img1" width=256px height=256px src="Bild1.png">
+<img id="img2" width=256px height=256px src="Bild2.png">
+
+
+    <script>
+        /* Erstelle eine Seite mit einem Absatz mit einem beliebigen Text. Füge darunter drei Buttons ein, die es dem Besucher
+erlauben, aus drei verschiedenen Layout-Entwürfen für die Seite zu wählen. */
+
+        "use strict";
+
+
+function Layout1(){
+    document.body.style.backgroundColor = "blue";
+    document.getElementById("Main_Heading").innerHTML ="This +++++++++ is a new Heading";
+    document.getElementById("Main Paragraph").innerHTML ="This is a new Paragraph.text +++++++++++++++++++";    
+    document.images[0].src="Bild2.png";
+    document.images[1].src="Bild1.png";
+}
+
+function Layout2(){
+    document.body.style.backgroundColor = "green";
+    document.getElementById("Main_Heading").innerHTML ="This is a absolutely new Heading";
+    document.getElementById("Main Paragraph").innerHTML ="This is a new Paragraph.text jkfdghdfksj jsdfkghldkf fdgkjdfl";    
+    document.images[0].src="Bild1.png";
+    document.images[1].src="Bild3.png";
+}
+
+
+function Layout3(){
+    document.body.style.backgroundColor = "red";
+    document.getElementById("Main_Heading").innerHTML ="This is a new dfsdfsdf Heading";
+    document.getElementById("Main Paragraph").innerHTML ="Tkjxhfkdk sdhfkhsdk sdkjfhsdk ksjdapsodfjla fsdfaljföajölsdkjgfsöda  sklöadjfls";    
+    document.images[0].src="Bild3.png";
+    document.images[1].src="Bild2.png";
+}
+
+
+    </script>
+
+</body>
+
+</html>

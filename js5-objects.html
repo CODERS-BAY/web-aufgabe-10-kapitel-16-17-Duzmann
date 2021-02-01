@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>OOP</title>
+    </head>
+    <body>
+
+        <form>
+            <input type="text" placeholder="farbe" id="farbe">
+            <input type="text" placeholder="preis" id="preis">
+            <input type="text" placeholder="typ" id="typ">
+            <button type="button" onclick="load()">Speichern</button>
+        </form>
+        <p id="ausgabe"></p>
+        <script>
+            'use strict';
+            
+            // Konstruktor gestalten
+            function eGeraet(farbe, preis, typ) {
+                this.Farbe = farbe;
+                this.Preis = preis;
+                this.Typ = typ;
+            }
+     
+            function load() {
+                let farbe = document.getElementById('farbe').value;
+                let preis = document.getElementById('preis').value;
+                let typ = document.getElementById('typ').value;
+                let meineKaffeemaschine = new eGeraet(farbe, preis, typ);
+                console.log(eGeraet);
+                // Eigenschaften des Objektes ausgeben
+                for (let i in meineKaffeemaschine) {
+                    document.getElementById('ausgabe').innerHTML += "<strong>" + i + "</strong>: " + meineKaffeemaschine[i] + "<br>";
+                }
+            }
+        </script>
+    </body>
+</html>

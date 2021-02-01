@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="de">
+<meta charset="UTF-8">
+<head>
+
+    <link href="css/stilUebung5.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+
+
+
+
+<div id="bg1" style="background-color: teal;"></div> 
+
+<div id="bg2" style="background-color: brown;"></div>
+
+<h1>Switch Divs</h1>
+
+<button onclick="toggleThis()">Switch</button>
+
+
+
+
+
+
+
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <script>
+            "use strict";
+
+            /* Gestalte eine Seite mit zwei div-Elementen mit identischer Größe aber unterschiedlichen Farben. Wenn die Seite
+            aufgerufen wird, soll jedoch eines der beiden Elemente mit der hide()-Methode (ohne Verzögerung) versteckt werden.
+            Füge darunter einen Button ein. Wenn der Anwender diesen anklickt, soll das Programm die beiden Rechtecke langsam
+            austauschen, indem es auf beide die toggle()-Methode anwendet. */
+
+            $('#bg1').hide();
+
+            function toggleThis(){
+                $('#bg1').toggle("slow");
+                $('#bg2').toggle("slow");
+            }
+            
+
+        </script>
+
+</body>
+
+</html>
