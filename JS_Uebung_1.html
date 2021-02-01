@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="de">
+<meta charset="UTF-8">
+<meta name="Funtronics Spielautomaten Recycling" content="Free Web tutorials">
+<meta name="keywords" content="Spielautomaten, Recycling, Funtronics">
+<meta name="author" content="Funtronics">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<head></head>
+
+<body>
+
+
+
+
+    <script>
+        "use strict";
+
+
+        let Username;
+        let Pass;
+        const User = "admin";
+        const Password = "admin"
+        do {
+            Username = prompt("admin admin \n\n Username");
+            Pass = prompt("Passwort");
+        } while (User != Username || Password != Pass);
+
+
+
+        let NumberOfErrors = 0;
+        let FehlerArray = [];
+
+        let Aufgabe1 = Number(prompt("Die Summe aus 4 und 5 ist..?"));
+        if (Aufgabe1 != 9) {
+            NumberOfErrors++;
+            FehlerArray[FehlerArray.length] = "Die Summe aus 4 und 5 <br>";
+        }
+        let Aufgabe2 = Number(prompt("Die Wurzel aus 144 ist..?"));
+        if (Aufgabe2 != 12) {
+            NumberOfErrors++;
+            FehlerArray[FehlerArray.length] = "Die Wurzel aus 144 <br>";
+        }
+        let Aufgabe3 = Number(prompt("3 mal 8 ist..?"));
+        if (Aufgabe3 != 24) {
+            NumberOfErrors++;
+            FehlerArray[FehlerArray.length] = "3 mal 8 <br>";
+        }
+        let Aufgabe4 = Number(prompt("18 minus 4 ist..?"));
+        if (Aufgabe4 != 14) {
+            NumberOfErrors++;
+            FehlerArray[FehlerArray.length] = "18 minus 4 <br>";
+        }
+        let Aufgabe5 = Number(prompt("Die Summe aus 19 und 101 ist..?"));
+        if (Aufgabe5 != 120) {
+            NumberOfErrors++;
+            FehlerArray[FehlerArray.length] = "Die Summe aus 19 und 101 <br>";
+        }
+
+        console.log(FehlerArray);
+        console.log(NumberOfErrors);
+
+        switch (NumberOfErrors) {
+            case 0:
+                alert("Alles richtig");
+                break;
+            case 1:
+                alert("Ein Fehler und zwar bei: \n" + FehlerArray);
+                break;
+            case 2:
+                alert("Zwei waren leider falsch:\n" + FehlerArray);
+                break;
+            case 3:
+                alert("Das geht besser. Falsch waren:\n" + FehlerArray);
+                break;
+            case 4:
+                alert("Fast Alles falsch.. :/\n" + FehlerArray);
+                break;
+            case 5:
+                alert("Alles falsch.. :/ \n" + FehlerArray);
+                break;
+            default:
+                alert("something went wrong");
+        }
+    </script>
+
+</body>
+
+</html>

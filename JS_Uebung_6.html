@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="de">
+<meta charset="UTF-8">
+<meta name="Funtronics Spielautomaten Recycling" content="Free Web tutorials">
+<meta name="keywords" content="Spielautomaten, Recycling, Funtronics">
+<meta name="author" content="Funtronics">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<head></head>
+
+<body>
+
+
+    <a href="#" id="showWarning">Wanna have a look at my pics?</a>
+
+    <div style="padding:3rem;" id="backgroundChange">
+        <p>Wanna have a look at my pics?</p>
+
+    </div>
+
+
+    <button style="margin:3rem;" type="button" id="switchThis">Wanna have a look at my pics?</button><br>
+
+    <input style="float: right; margin-right: 8rem;" value="Wanna have a look at my pics?" id="anotherWay"
+        type="button">
+
+
+
+
+    <script>
+        "use strict";
+
+
+
+        showWarning.onmouseover = function () {
+            alert("XXX-Content! 18+! WARNING!");
+        }
+
+
+        backgroundChange.onclick = function () {
+            this.style.backgroundColor ='yellow';
+            this.style.fontWeight ='bold';
+
+        }
+        backgroundChange.onmouseover = function () {
+            this.style.backgroundColor ='lightblue';
+            this.style.fontWeight ='normal';
+
+        }
+
+
+        switchThis.onclick = function() {
+            
+
+        }
+
+        function message1() {
+            alert("- - - - - - - - - -");
+            switchThis.addEventListener("click", message2);
+            switchThis.addEventListener("Click", message1);
+        }
+
+        function message2() {
+            alert("+ + + + + + + + + +");
+            switchThis.addEventListener("click", message1);
+            switchThis.addEventListener("Click", message2);
+        }
+        switchThis.addEventListener("Click", message1);
+
+
+
+        function click() {
+            alert("DON´T click here!")
+        }
+
+        function mdown() {
+            alert("WTF DID I JUST SAY??!!")
+        }
+
+        function mup() {
+            alert("Dummy ..")
+        }
+
+
+        anotherWay.onclick = click;
+        anotherWay.onmousedown = mdown;
+        anotherWay.onmouseup = mup;
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,256 @@
+@font-face {
+    font-family: montserrat;
+    src: url(../fonts/Montserrat-Bold.ttf);
+  }
+  
+  @font-face {
+    font-family: grotzec;
+    src: url(../fonts/GrotzecXnarrow-Bold.otf);
+  }
+
+  @font-face {
+    font-family: stencil;
+    src: url(../fonts/STENCIL.TTF);
+  }
+
+  @font-face {
+    font-family: bernard;
+    src: url(../fonts/BERNHC.TTF);
+  }
+
+  @font-face {
+    font-family: gloucester;
+    src: url(../fonts/BERNHC.TTF);
+  }
+
+  
+  
+html {
+    background-color: black;     
+    padding-left: .25rem;
+    padding-right: .25rem;
+    padding-top: .5rem;
+ } 
+
+body {
+    background-color: black;
+    color: white;
+    max-width:800px;
+    margin: auto;
+    
+}
+
+
+a {
+    color:lightgreen;
+    text-decoration: none;
+}
+
+
+
+.BoldRedLeft {
+    margin:0;
+    color:red;
+    font-weight: bold;
+    text-transform: Uppercase;
+    line-height: 9rem;
+    font-size: 10rem;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+
+.BoldYellowLeftItalic {
+    font-style: italic;
+    text-align: left;
+    color: yellow;
+    text-transform: Uppercase;
+    line-height: 2.5rem;
+    font-size: 2.5rem;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+
+.OrangeLeftNarrowLarge {
+    text-align: left;
+    color: rgb(253, 93, 53);
+    text-transform: Uppercase;
+    line-height: 4rem;
+    font-size: 4rem;
+    font-family: grotzec;
+    letter-spacing: .2rem;
+    margin-top: 0.3rem;
+    margin-bottom: 1rem;
+}
+
+.OrangeLeftNarrowExtraLarge {
+  text-align: left;
+  color: rgb(253, 93, 53);
+  text-transform: Uppercase;
+  line-height: 4rem;
+  font-size: 6.5rem;
+  font-family: grotzec;
+  letter-spacing: .2rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0;
+}
+
+
+
+
+.BoldGreenCaps {
+    color:lightgreen;
+    font-size: 3rem;
+    line-height: 3rem;
+    font-family: fantasy;
+    text-decoration: none;
+    text-align:center;
+    letter-spacing:.25rem;
+    text-transform: uppercase;
+}
+
+.CondensedWhiteCaps{
+    width: 100%;
+    color: white;
+    Font-size: 3.8rem;
+    line-height: 3rem;
+    font-family: grotzec;
+    text-transform: uppercase;
+    letter-spacing: .25rem;
+    /*margin-top: 0.5rem;
+    margin-bottom: 0.5rem;*/
+}
+
+.CondensedWhiteCapsSmall{
+    text-align: left;
+    color: white;
+    Font-size: 3rem;
+    line-height: 2.2rem;
+    font-family: grotzec;
+    text-transform: uppercase;
+    letter-spacing: .25rem;
+    margin-top: -1rem;
+    margin-bottom: 0.5rem;*/
+}
+
+
+.adressRibbon {
+    color: yellow;
+    font-family: montserrat;
+    text-transform: uppercase;
+    font-size: .8rem;
+}
+
+.TextFieldWide {
+  margin-top:1rem;
+  border-top: 5px solid black;
+  background-color: blanchedalmond;
+  color: black;
+  padding: 1rem;
+}
+
+.RedStencil{
+    text-align: left;
+    color: red;
+    font-family: stencil;
+    Font-size: 2.4rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+}
+
+.WhiteReadableTextLarge {
+
+    text-align: left;
+    margin-top: 1.3rem;
+    font-family: bernard;
+    font-size: 2rem;
+    line-height: 2.2rem;
+    text-transform: uppercase;
+    font-weight: lighter;
+    letter-spacing: .1rem;
+
+}
+
+.WhiteReadableTextExtraLarge {
+
+  text-align: left;
+  margin-top: -2rem;
+  font-family: bernard;
+  font-size: 2.8rem;
+  line-height: 2.8rem;
+  text-transform: uppercase;
+  font-weight: lighter;
+  letter-spacing: .1rem;
+  margin-bottom:0;
+
+}
+
+
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    flex-flow: row wrap;
+    margin-top: 0;    
+    justify-content: left;
+  }
+
+  .flex-item {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: auto;
+    text-align: center;
+    margin: 0;    
+    max-width: 25rem; 
+    min-width: 10rem;  
+    overflow: visible;
+  }
+  
+
+  .flex-item-full-width {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: auto;
+    text-align: center;
+    margin: 0;    
+    width: 100%; 
+    overflow: visible;
+  }
+  
+  
+  .BigFatImage {
+      float:right;
+      margin-top: 7.5rem;
+      max-height: 60rem;
+      margin-bottom: -85rem;
+  }
+
+  /* Style the video: 100% width and height to cover the entire window */
+#myVideo {
+    object-fit: cover;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+  
+
+  .viewport-header {
+    position: relative;
+    height: 100vh;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  video {
+    object-fit: cover;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+  }

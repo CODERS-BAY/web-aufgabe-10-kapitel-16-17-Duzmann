@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="de">
+<meta charset="UTF-8">
+<meta name="Funtronics Spielautomaten Recycling" content="Free Web tutorials">
+<meta name="keywords" content="Spielautomaten, Recycling, Funtronics">
+<meta name="author" content="Funtronics">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<head></head>
+<body>
+
+    
+
+
+    <script>
+    "use strict";
+
+
+let MultiArray = [];
+MultiArray[0] = ["accounting", "hans", "Huber", 24];
+MultiArray[1] = ["support", "peter", "maier", 34];
+MultiArray[2] = ["marketing", "conny", "müller", 19];
+MultiArray[3] = ["sales", "evelyn", "Huber", 52];
+
+
+let eingabeStaffID = prompt("Please enter Staff ID");
+let eingabeRequestedInfo = prompt("Please select desired information \n departement [0] first name [1] last name [2] age [3]");
+document.write(MultiArray[eingabeStaffID][eingabeRequestedInfo]);
+
+
+    </script>     
+    
+</body>
+
+</html>
