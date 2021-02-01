@@ -26,24 +26,25 @@
   
   
 html {
-    background-color: black;     
-    padding-left: .25rem;
-    padding-right: .25rem;
-    padding-top: .5rem;
+    background-color: rgb(170, 150, 150);     
+
  } 
 
 body {
     background-color: black;
     color: white;
-    max-width:800px;
+    max-width:850px;
     margin: auto;
     margin-top: -.5rem;
+    padding-left: .5rem;
+    padding-right: .5rem;
+    padding-top: .5rem;
     
 }
 
 
 a {
-    color:lightgreen;
+    color: blue;
     text-decoration: none;
 }
 
@@ -114,13 +115,13 @@ a {
 .CondensedWhiteCaps{
     width: 100%;
     color: white;
-    Font-size: 3.8rem;
+    Font-size: 4.2rem;
     line-height: 3rem;
     font-family: grotzec;
     text-transform: uppercase;
     letter-spacing: .25rem;
-    /*margin-top: 0.5rem;
-    margin-bottom: 0.5rem;*/
+    margin-top: 0.5rem;
+    margin-bottom: 0.3rem;
 }
 
 .CondensedWhiteCapsSmall{
@@ -132,7 +133,7 @@ a {
     text-transform: uppercase;
     letter-spacing: .25rem;
     margin-top: -1rem;
-    margin-bottom: 0.5rem;*/
+    margin-bottom: 0.5rem;
 }
 
 
@@ -141,14 +142,17 @@ a {
     font-family: montserrat;
     text-transform: uppercase;
     font-size: .8rem;
+    margin-bottom: 0;
+    margin-top: 0.3rem;
 }
 
 .TextFieldWide {
-  margin-top:1rem;
-  border-top: 5px solid black;
+  margin-top:0rem;
   background-color: blanchedalmond;
   color: black;
   padding: 1rem;
+  column-count: 2;
+  text-align: justify;
 }
 
 .RedStencil{
@@ -156,14 +160,18 @@ a {
     color: red;
     font-family: stencil;
     Font-size: 2.4rem;
+    line-height: 2rem;
     text-transform: uppercase;
     letter-spacing: .1rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0rem;
+
 }
 
 .WhiteReadableTextLarge {
 
     text-align: left;
-    margin-top: 1.3rem;
+    margin-top: 0.3rem;
     font-family: bernard;
     font-size: 2rem;
     line-height: 2.2rem;
@@ -183,7 +191,7 @@ a {
   text-transform: uppercase;
   font-weight: lighter;
   letter-spacing: .1rem;
-  margin-bottom:0;
+  margin-bottom: 1.5rem;
 
 }
 
@@ -203,9 +211,10 @@ a {
     flex-basis: auto;
     text-align: center;
     margin: 0;    
-    max-width: 25rem; 
+    max-width: 26.5rem; 
     min-width: 10rem;  
     overflow: visible;
+    /*background-color: beige;*/
   }
   
 
@@ -214,21 +223,20 @@ a {
     flex-shrink: 1;
     flex-basis: auto;
     text-align: center;
-    margin: 0;    
     width: 100%; 
+    margin:-.5rem;
     overflow: visible;
   }
   
   
   .BigFatImage {
       float:right;
-      margin-top: 7.5rem;
+      margin-top: 6.5rem;
       max-height: 60rem;
       margin-bottom: -85rem;
   }
 
-  /* Style the video: 100% width and height to cover the entire window */
-#myVideo {
+  #myVideo {
     object-fit: cover;
     width: 100vw;
     height: 100vh;
@@ -238,21 +246,19 @@ a {
     z-index: -1;
   }
   
-
-  .viewport-header {
-    position: relative;
-    height: 100vh;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  .recylingLogo {
+    width: 3rem;
+    float:left;
+    padding-right: .5rem;
   }
 
-  video {
-    object-fit: cover;
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    left: 0;
+  .donations {
+    float:right;
+    width: 7rem;
+  shape-outside: url(../img/donations-appreciated.png);
+  shape-image-threshold: .6;
+  shape-margin: .5rem;
+  padding-top: .2rem;
+  margin-right: -.3rem;
   }
+  
