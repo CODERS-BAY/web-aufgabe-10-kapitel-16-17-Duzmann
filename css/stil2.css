@@ -37,6 +37,7 @@ body {
     color: white;
     max-width:800px;
     margin: auto;
+    margin-top: -.5rem;
     
 }
 
@@ -234,6 +235,7 @@ a {
     position: fixed;
     top: 0;
     left: 0;
+    z-index: -1;
   }
   
 
