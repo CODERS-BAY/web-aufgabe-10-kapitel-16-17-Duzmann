@@ -25,26 +25,30 @@
 
   
   
-html {
-    background-color: rgb(170, 150, 150);     
+html {    
 
  } 
 
 body {
-    background-color: black;
     color: white;
-    max-width:850px;
+    max-width: 850px;
     margin: auto;
     margin-top: -.5rem;
-    padding-left: .5rem;
-    padding-right: .5rem;
-    padding-top: .5rem;
+
     
+}
+
+.backGround {
+  background-color: black;
+  padding-left: .5rem;
+  padding-right: .5rem;
+  padding-top: .5rem;
+
 }
 
 
 a {
-    color: blue;
+    color: lightgreen;
     text-decoration: none;
 }
 
@@ -112,10 +116,30 @@ a {
     text-transform: uppercase;
 }
 
+
+.BoldGreenCapsSmall {
+  color:lightgreen;
+  font-size: 3rem;  
+  font-family: fantasy;
+  text-decoration: none;
+  text-align:center;
+  letter-spacing:.25rem;
+  text-transform: uppercase;
+  font-size: 1.5rem; 
+  line-height: 1.5rem; 
+  margin-top: 0.2rem; 
+  margin-bottom: 0.2rem; 
+  margin-left: -1rem; 
+  letter-spacing: 0.1rem; 
+  padding-top:0.2rem;"
+}
+
+
+
 .CondensedWhiteCaps{
     width: 100%;
     color: white;
-    Font-size: 4.2rem;
+    Font-size: 4rem;
     line-height: 3rem;
     font-family: grotzec;
     text-transform: uppercase;
@@ -211,7 +235,7 @@ a {
     flex-basis: auto;
     text-align: center;
     margin: 0;    
-    max-width: 26.5rem; 
+    max-width: 26rem; 
     min-width: 10rem;  
     overflow: visible;
     /*background-color: beige;*/
@@ -231,7 +255,7 @@ a {
   
   .BigFatImage {
       float:right;
-      margin-top: 6.5rem;
+      margin-top: 8rem;
       max-height: 60rem;
       margin-bottom: -85rem;
   }
