@@ -30,6 +30,9 @@
 
 
 
+  
+@import url('https://fonts.googleapis.com/css?family=Nunito:300');
+
 
   
 html {    
@@ -37,28 +40,89 @@ html {
  } 
 
 body {
-    color: white;
-    max-width: 850px;
-    margin: auto;
-    margin-top: -.5rem;    
+  
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  flex-flow: row wrap;
+  margin-top: 0;    
+  justify-content: center;
+    color: white;   
 }
 
 body::-webkit-scrollbar {
   display: none;
 }
 
-.backGround {
-  background-color: black;
+/*
+
+body > * {
+  border: 5px solid white;
+}
+
+
+*/
+
+
+.backGroundBlack {
+  width: 810px;
+  text-align: left;
+  margin-top: .5rem;
+  background-color: rgb(0, 0, 0);
   padding-left: .5rem;
-  padding-right: .5rem;
   padding-top: .5rem;
   overflow: hidden;
-
   position: relative;
     z-index: 0;
 
-    border-bottom: .5rem solid white;
 
+}
+
+.backGroundPaper {
+  flex-wrap: wrap;
+  max-width: 850px;
+  margin-top: .5rem;
+  /*background-color: lightyellow;*/
+  padding-left: .5rem;
+  padding-right: .5rem;
+  padding-top: .5rem;
+  overflow: visible;
+
+}
+
+
+
+.flex-sidebar-left {
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: auto;
+  text-align: left;
+  height: 100%    
+  width: 100%;
+  overflow: visible;
+  background-color: red;
+}
+
+
+.flex-sidebar-right {
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: auto;
+  text-align: left;
+  height: 100%    
+  width: 100%;
+  overflow: visible;
+  background-color: green;
+  
+  position: sticky;
+    z-index: 1;
+  
+}
+
+
+
+#broforce-advert {
+  background-color: lightblue;
 }
 
 
@@ -189,7 +253,7 @@ a {
     line-height: 3rem;
     font-family: grotzec;
     text-transform: uppercase;
-    letter-spacing: .25rem;
+    letter-spacing: .5rem;
     margin-top: 0.5rem;
     margin-bottom: 0.3rem;
     
@@ -271,12 +335,25 @@ a {
 
 
 .flex-container {
+  /*max-width: 850px;*/
+  width: 100%;
     display: flex;
     flex-direction: row;
     flex-flow: row wrap;
     margin-top: 0;    
     justify-content: left;
   }
+
+  .flex-container-center {
+    /*max-width: 850px;*/
+      display: flex;
+      flex-direction: row;
+      flex-flow: row wrap;
+      margin-top: 0;    
+      justify-content: center;
+    }
+
+
 
   .flex-item {
     flex-grow: 1;
@@ -296,7 +373,7 @@ a {
     flex-basis: auto;
     text-align: center;
     margin: 0;    
-    max-width: 26rem; 
+    max-width: 24rem; 
     min-width: 10rem;  
     overflow: visible;
     position: relative;
@@ -318,18 +395,107 @@ a {
   
 
   .flex-item-full-width {
+    
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: auto;
+    /*text-align: center;*/
+    width: 100%; 
+    margin:-.5rem;
+    overflow: visible;
+  }
+/*
+  .flex-item-full-width-button {
+    background-color: rgb(93, 212, 202);
+    /*
+    background-image: url("/img/broforce-gameplay.jpg");
+    background-position: center center;
+    background-size: cover;
+    */
+    
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: auto;
+    text-align: left;
+    color: black;
+    height: 8rem;
+    margin-top: 0.75rem;  
+    margin-bottom: 1rem;  /*    
+    //max-width: 90%;
+    //transform: rotate(-2deg);
+    //border-radius: .5rem;
+    //border: .3rem solid yellow;  
+  }
+  
+*/
+
+
+
+
+
+
+  .flex-item-small-30 {
     flex-grow: 1;
     flex-shrink: 1;
     flex-basis: auto;
     text-align: center;
-    width: 100%; 
-    margin:-.5rem;
+    margin: 0;    
+    width: 30%;  
     overflow: visible;
+    
+  }
+
+  .flex-item-small-40 {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: auto;
+    text-align: center;
+    margin: 0;    
+    width: 40%;  
+    
+    /*background-color: beige;*/
+  }
+
+
+  .flex-container-full-width-button {
+      /*max-width: 850px;*/
+      overflow: visible;
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      flex-flow: row wrap;
+      margin-bottom: 4rem;
+      
+    }
+
+    .buttonBackground {
+      margin-left:1%;
+      width: 98%;
+      border: 0.15rem solid rgb(115, 115, 138);
+      background-color: lightsteelblue;
+    }
+
+    .imageOnly {
+      margin-top: -2rem;
+      margin-left: -2rem;
+      margin-bottom: -2.5rem;
+      max-width: 53rem;
+    }
+
+    
+
+  .spacer100 {
+    margin-bottom: 100rem;
+  }
+  
+  .spacer3 {
+    margin-bottom: 5rem;
   }
   
   
   .BigFatImage {
       float:right;
+      margin-right:3rem;
       margin-top: 8rem;
       max-height: 65rem;
       margin-bottom: -85rem;
@@ -361,3 +527,205 @@ a {
   margin-right: -.3rem;
   }
   
+.gameLabel{
+  background-color: rgb(167, 72, 77);
+  color: white;
+  font-family: ;
+  width: min-content;
+  margin-left: -2.5rem;
+  margin-top: -2rem;
+  border: .3rem solid white;
+  font-size: 2rem;
+  padding:0.5rem;
+  transform: rotate(2deg);
+  text-transform: uppercase;
+
+}
+
+h3 {
+  margin:0;
+}
+
+
+#titles
+{
+	position: relative;
+    z-index: 0;
+	width: 90%;
+  padding-left: 5%;
+  height: 20rem; 
+	margin-bottom: 0;
+	font-size: 550%;
+	font-weight: bold;
+	text-align: justify;
+	overflow: visible;
+	transform-origin: 50% 100%;
+	transform: perspective(400px) rotateX(30deg);
+}
+
+#titles:after
+{
+	position: sticky;
+	content: ' ';
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	background-image: linear-gradient(top, rgba(0,0,0,1) 0%, transparent 100%);
+	pointer-events: none;
+}
+
+#titlecontent
+{
+	position: absolute;
+	top: 100%;
+	animation: scroll 20s linear 4s infinite;
+}
+
+@keyframes scroll {
+	0% { top: 100%; }
+	100% { top: -170%; }
+}
+
+
+
+
+.headerDiv{
+height: 50rem;
+flex: 1 100%;
+text-align: center;
+ }
+
+
+
+.footer {
+  flex: 1 100%;
+  text-align: center;
+  color:red;
+}
+.sidebar-left {
+  flex: 1;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
+.sidebar-right {
+  text-align: right;
+  flex: 1;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
+.header {
+}
+
+.main {
+}
+
+.container-01 {
+  max-width: 805px;
+}
+
+.container-02-1 {
+  text-align: left;
+  background-color: rgb(0, 0, 0);
+  overflow: hidden;
+  position: relative;
+    z-index: 0;
+}
+
+.container-02-2 {
+  /*dskflsjf*/
+  }
+
+#crawl-container {
+  perspective: calc(100vh * 0.4);
+}
+
+#crawl {
+  color: #f5c91c;     
+  
+  position: relative;  
+  width: 110%;         
+  left: -5%;           
+  bottom: -5%;         
+  height: 200%;        
+  overflow: hidden;    
+  
+  transform: rotate3d(1, 0, 0, 45deg);
+}
+
+#crawl {
+  mask-image: linear-gradient(
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0.66),
+    rgba(0, 0, 0, 1)
+  );
+}
+
+#crawl-content {
+  font-family: "Roboto";
+  letter-spacing: 0.09em;
+  font-size: calc(100vw * 0.074);
+}
+
+
+
+//---------------------------
+
+
+
+.fade {
+  position: sticky;
+  width: 100%;
+  min-height: 60vh;
+  top: -25px;
+  background-image: linear-gradient(0deg, transparent, black 75%);
+  z-index: 1;
+}
+
+.star-wars {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  z-index: -1;
+  height: 800px;
+  color: #feda4a;
+  font-family: 'Pathway Gothic One', sans-serif;
+  font-size: 500%;
+  font-weight: 600;
+  letter-spacing: 6px;
+  line-height: 150%;
+  perspective: 400px;
+  text-align: justify;
+}
+
+.crawl {
+  position: relative;
+  top: 9999px;
+  transform-origin: 50% 100%;
+  /*animation: crawl 60s linear;*/
+}
+
+.crawl > .title {
+  font-size: 90%;
+  text-align: center;
+}
+
+.crawl > .title h1 {
+  margin: 0 0 100px;
+  text-transform: uppercase;
+}
+
+@keyframes crawl {
+  0% {
+  top: 0;
+  transform: rotateX(30deg)  translateZ(0);
+  }
+  100% { 
+  top: -6000px;
+  transform: rotateX(30deg) translateZ(-5500px);
+  }
+}

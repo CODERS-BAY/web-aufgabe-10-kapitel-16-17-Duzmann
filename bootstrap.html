@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+<meta charset="UTF-8">
+<title>Schere, Stein, Papier</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+<style>
+
+.bg-custom {
+    background-image: url("img/bggame.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+body, main {
+    min-height: 100vh;
+}
+
+
+
+
+</style>
+
+
+</head>
+
+
+<body>
+
+
+    <main class="bg-custom" >
+
+        <h1 class="text-white text-center py-5">Schere Stein Papier</h1>
+
+        <article class="container bg-transparent p-4 shadow-lg" >
+
+           <section class="row">
+
+            <button id="1" class="col text-center border-0 " type="button" onclick="play(1)">
+                <img class="img-fluid w-50 " src="img/Schere.png" alt="Schere">
+                <h3 id="31" class="text-center">- - -</h3>
+            </button>
+
+            <button id="2" class="col text-center border-0" type="button" onclick="play(2)">
+                <img class="img-fluid w-50 bg-transparent" src="img/Stein.png" alt="Stein">
+                <h3 id="32" class="text-center">- - -</h3>
+            </button>
+
+            <button id="3" class="col text-center border-0" type="button" onclick="play(3)">
+                <img class="img-fluid w-50 bg-transparent" src="img/Papier.png" alt="Papier">
+                <h3 id="33" class="text-center">- - -</h3>
+            </button>
+
+
+
+           </section>
+
+           <h2 class="text-center px-3">Runde: <span id="info"></span><br>
+           You: <span id="scoreUser"></span> Computer: <span id="scoreComputer"></span></h2>
+
+        </article > 
+        
+
+    </main>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+
+
+    <script>
+        "use strict;"
+
+        let round = 0;
+        let computerChoice = 0;
+        let countUserWins = 0;
+        let countComputerWins = 0;
+        let winMessage = ""; 
+
+
+
+        function play (userChoice) {
+
+            round++;
+
+            console.log(userChoice);
+
+            computerChoice = Math.floor(Math.random() * 3) + 1; 
+
+            console.log(computerChoice);
+
+
+
+
+
+            if (userChoice == computerChoice) {
+                unentschieden();
+            }
+            else if ((userChoice == 1 && computerChoice == 3) || (userChoice == 2 && computerChoice == 1) || (userChoice == 3 && computerChoice == 2)){
+                gewonnen();
+            }
+            else {
+                verloren();               
+            }
+
+
+
+
+
+        function unentschieden () {
+            
+            winMessage = "unentschieden";
+
+        }
+
+        function gewonnen () {
+
+            winMessage = "gewonnen!";
+
+            var x = document.getElementById(userChoice);  
+            x.style.backgroundColor = "green";    
+
+            var x = document.getElementById(computerChoice);  
+            x.style.backgroundColor = "red"; 
+
+            countUserWins++
+            
+        }
+
+        function verloren () {
+
+            winMessage = "verloren"; 
+
+            var x = document.getElementById(userChoice);  
+            x.style.backgroundColor = "red";    
+
+            var x = document.getElementById(computerChoice);  
+            x.style.backgroundColor = "green"; 
+
+            countComputerWins++
+            
+        }
+
+
+        
+        console.log(winMessage);
+
+        document.getElementById('info').innerText = round; 
+        document.getElementById('scoreUser').innerText = countUserWins; 
+        document.getElementById('scoreComputer').innerText = countComputerWins; 
+
+    }
+
+
+    </script>
+
+
+</body>
+
+
+</html>
